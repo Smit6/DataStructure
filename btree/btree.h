@@ -1,3 +1,9 @@
+/* file_name : btree.h
+ * author_name : Smitkumar Contractor
+ * contact : smitcontractor@gmail.com
+ * brief : declares class Btree
+ */
+
 #include <iostream>
 
 #ifndef B_TREE

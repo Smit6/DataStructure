@@ -1,3 +1,8 @@
+/* file_name : stack.cpp
+ * author_name : Smitkumar Contractor
+ * contact : smitcontractor@gmail.com
+ * brief : perform call to procedurs of class stackH
+ */
 #include "stack.h"
 
 #include <iostream>

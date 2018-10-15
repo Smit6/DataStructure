@@ -1,3 +1,8 @@
+/* file_name : btree.h
+ * author_name : Smitkumar Contractor
+ * contact : smitcontractor@gmail.com
+ * brief : preforms methods of Btree
+ */
 #include "btree.h"
 #include <queue>
 
@@ -5,18 +10,38 @@ using std::queue;
 using std::cout;
 using std::endl;
 
+/* function name : insert
+ * arguments : number
+ * brief : call private insert
+ * retruns : void
+ */
 void Btree::insert(int number) {
   insert(number, head_);
 }
 
+/* function name : show
+ * arguments : none
+ * brief : call private show
+ * retruns : void
+ */
 void Btree::show() {
   show(head_);
 }
 
+/* function name : delete_
+ * arguments : number
+ * brief : call private delete_
+ * retruns : void
+ */
 void Btree::delete_(int number) {
   delete_(number, head_);
 }
 
+/* function name : insert
+ * arguments : number, curr_head
+ * brief : creates and inserts newly created node with the number
+ * retruns : void
+ */
 void Btree::insert(int number, Node*& curr_head) {
   Node* node = new Node(number, NULL, NULL);
   if (curr_head == NULL) {
@@ -30,6 +55,11 @@ void Btree::insert(int number, Node*& curr_head) {
   insert(number, curr_head->right_);
 }
 
+/* function name : show
+ * arguments : curr_head
+ * brief : perfroms dfs
+ * retruns : void
+ */
 void Btree::show(Node*& curr_head) {
   if (curr_head == NULL)
     return;
@@ -38,6 +68,11 @@ void Btree::show(Node*& curr_head) {
   show(curr_head->right_);
 }
 
+/* function name : delete_
+ * arguments : number, curr_head
+ * brief : deletes the given number from the tree
+ * retruns : void
+ */
 void Btree::delete_(int number, Node*& curr_head) {
 	if (curr_head->number_ == number) {
 		if (curr_head->left_ == NULL && curr_head->right_ == NULL) {
@@ -64,6 +99,11 @@ void Btree::delete_(int number, Node*& curr_head) {
 	}
 }
 
+/* function name : find_min
+ * arguments : curr_head
+ * brief : find min element from a given subtree
+ * retruns : int
+ */
 int Btree::find_min(Node* curr_head) {
 	Node* temp = curr_head;
 	while (temp->left_ != NULL) {
@@ -73,6 +113,11 @@ int Btree::find_min(Node* curr_head) {
 	return temp->number_;
 }
 
+/* function name : bfs
+ * arguments : none
+ * brief : performs bfs on the tree
+ * retruns : void
+ */
 void Btree::bfs() {
   if (head_ == NULL)
     return;
@@ -89,6 +134,11 @@ void Btree::bfs() {
   }
 }
 
+/* function name : my_bfs
+ * arguments : none
+ * brief : performs bfs on the tree
+ * retruns : void
+ */
 void Btree::my_bfs() {
 	if (head_ == NULL) {
 		return;

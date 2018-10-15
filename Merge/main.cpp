@@ -1,8 +1,20 @@
+/* file_name : main.cpp
+ * author_name : Smitkumar Contractor
+ * contact : smitcontractor@gmail.com
+ * brief : perform mergeSort
+ */
 #include <iostream>
 
 using std::cout;
 using std::endl;
 
+/* function name : merge
+ * arguments : array, left index, middle index, right index
+ * brief : The merge() function is used for merging two halves.
+  The merge(arr, l, m, r) is key process that assumes that arr[l..m] and
+  arr[m+1..r] are sorted and merges the two sorted sub-arrays into one.
+ * retruns : void
+ */
 void merge(int* arr, int left, int middle, int right) {
   int n1 = middle - left + 1;
   int n2 = right - middle;
@@ -23,6 +35,13 @@ void merge(int* arr, int left, int middle, int right) {
   }
 }
 
+/* function name : mergeSort
+ * arguments : array, left index, right index
+ * brief : Merge Sort is a Divide and Conquer algorithm. It divides input array
+  in two halves, calls itself for the two halves and then merges the two sorted
+  halves.
+ * retruns : void
+ */
 void mergeSort(int* arr, int left, int right) {
   if (left >= right)
     return;

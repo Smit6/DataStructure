@@ -1,3 +1,9 @@
+/* file_name : main.cpp
+ * author_name : Smitkumar Contractor
+ * contact : smitcontractor@gmail.com
+ * brief : calls functions in order to create/destroy hashTable
+ */
+
 #include <iostream>
 #include "hash.h"
 
